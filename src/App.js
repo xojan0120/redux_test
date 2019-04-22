@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import reducers from './reducers/combineReducers';
-import Calculator from './components/calc';
-import { Provider } from 'react-redux';
+import React           from 'react';
 import { createStore } from 'redux';
+import { Provider }    from 'react-redux';
+import reducers        from './reducers/combineReducers';
+import Calculator      from './containers/containerCalculator';
 
-class App extends Component {
-  render() {
-    // reducerはstateを加工して新しいstateを
-    // 返してくれる関数
-    const store = createStore(reducers);
-    //console.log(store.getState().calc);
-    return (
-      <Provider store={store}>
-        <Calculator message="hello world" />
-      </Provider>
-    );
-  }
+const App = (props) => {
+  // reducerはstateを加工して新しいstateを返してくれる関数
+  const store = createStore(reducers);
+  return (
+    <Provider store={store}>
+      <Calculator message="hello world" />
+    </Provider>
+  );
 }
+
+//class App extends Component {
+//  render() {
+//    // reducerはstateを加工して新しいstateを返してくれる関数
+//    const store = createStore(reducers);
+//    return (
+//      <Provider store={store}>
+//        <Calculator message="hello world" />
+//      </Provider>
+//    );
+//  }
+//}
 
 export default App;
