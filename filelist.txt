@@ -1,0 +1,12 @@
+src
+├── actions
+│   └── actionCalculator.js
+├── App.js
+├── components
+│   └── calculator.js
+├── containers
+│   └── containerCalculator.js
+├── index.js
+├── reducers
+│   ├── combineReducers.js
+│   └── reducerCalculator.js
