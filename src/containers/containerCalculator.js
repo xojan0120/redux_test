@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-    addValue:   (amount,e) => { dispatch(addValue(amount)) },
+    addValue:   (amount) => { dispatch(addValue(amount)) },
     multiValue: (amount) => { dispatch(multiValue(amount)) },
   });
 };
