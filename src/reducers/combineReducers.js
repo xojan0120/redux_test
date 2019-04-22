@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import calcReducer from './calcReducer'
+import calc from './calc'
 
 export default combineReducers({
-  calcReducer,
+  calc,
 })

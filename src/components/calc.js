@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addValueAction } from './actions';
-import { multiValueAction } from './actions';
+import { addValueAction, multiValueAction } from '../actions/calc';
 
 const Calculator = (props) => {
   console.log(props);
@@ -16,13 +15,10 @@ const Calculator = (props) => {
   );
 };
 
-
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.calcReducer);
+  console.log(state.calc);
   //console.log(ownProps);
-  return (
-    state.calcReducer
-  );
+  return state.calc;
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
